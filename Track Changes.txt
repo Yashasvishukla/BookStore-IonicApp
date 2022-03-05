@@ -1,0 +1,12 @@
+18 Aug 2021
+
+setup for mongodb database
+setup unitofwork for common usage.
+Add support for get all books
+Add support for upload book
+
+
+28 Aug 2021
+Set up the frontend page with 1 Nav Bar 
+Display books in the frontend.
+Description page of the books.

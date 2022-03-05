@@ -1,0 +1,7 @@
+<div class="row" style="margin-left: 10px; margin-right: 10px;">
+    <div class="col-4" *ngFor="let book of (books$ | async) as books">
+        <book-details [book]="book"></book-details>
+    </div>
+</div>
+
+

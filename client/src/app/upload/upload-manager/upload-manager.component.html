@@ -1,0 +1,116 @@
+<div class="container row mt-5 mb-4">
+  <h1 class="display-4">Upload your favourite book here!!</h1>
+  <h4 class="h5 mb-3">Don't forget to recommend others</h4>
+  <div class="col-8">
+    <form [formGroup]="form" (ngSubmit)="submit(form.value)">
+      <div class="mb-2">
+        <label for="nameOfBook" class="form-label">Name of Book</label>
+        <input type="email" class="form-control" id="nameOfBook" formControlName="nameOfBook">
+
+        <div  class="alert alert-danger mt-2" *ngIf="nameOfBook?.touched && nameOfBook?.invalid">
+          <div *ngIf="nameOfBook?.errors?.cannotBeNull">
+            How Others will identify you Book ??. Please Enter name of Book!
+          </div>
+
+          <div *ngIf="nameOfBook?.errors?.cannotContainsSpecialCharacters">
+            Its Hard to match special Characters to find a book for you. Lets avoid special characters!
+          </div>
+
+        </div>
+
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea rows="3" type="text" class="form-control" id="description" formControlName="description"></textarea>
+        <div class="alert alert-danger mt-2" *ngIf="description?.touched && description?.invalid">
+          <div *ngIf="description?.errors?.required">
+            Adding a description will increase 80% chances of your book to attract readers .Please provide a nice description of your book.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" name="author" id="author" formControlName="author">
+        <div class="alert alert-danger mt-2" *ngIf="author?.touched && author?.invalid">
+          <div *ngIf="author?.errors?.required">Please show some respect to the Author of the Book!!</div>
+        </div>
+        <div *ngIf="author?.errors?.cannotContainsSpecialCharacters">
+          Author name can't have special characters!!
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="genre">Genre</label>
+        <select class="form-select" name="genre" id="genre" formControlName="genre">
+          <option value="mystery">Mystery</option>
+          <option value="crime">Crime</option>
+          <option value="drama">Drama</option>
+          <option value="horror">Horror</option>
+          <option value="political thriller">Political thriller</option>
+          <option value="picture book">Picture book</option>
+          <option value="poetry">Poetry</option>
+          <option value="comic book">Comic book</option>
+        </select>
+
+        <div class="alert alert-danger mt-2" *ngIf="genre?.touched && genre?.invalid">
+          <div *ngIf="genre?.errors?.required">
+            Please let others know the Genre of the Book!!!
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="picture">Picture Url</label>
+        <input type="text" class="form-control" name="picture" id="picture" formControlName="pictureUrl">
+      </div>
+
+      <div class="mb-3">
+        <label for="pages">Pages</label>
+        <input type="number" class="form-control" name="pages" id="pages" formControlName="pages">
+        <div class="alert alert-danger mt-2" *ngIf="pages?.touched && pages?.invalid">
+          <div *ngIf="pages?.errors?.required">
+            Please provide Number of Page!!
+          </div>
+        </div>
+      </div>
+
+      
+      <button class="btn btn-secondary ml-3" [routerLink]="['../']" routerLinkActive="router-link-active"  style="float: right; margin-right: 10px;">Back</button>
+      <button type="submit" class="btn btn-primary" [disabled]="!form.valid" style="float: right; margin-right: 5px;">Submit</button>
+    </form>
+  </div>
+
+
+  <div class="col-4">
+    <img width="400" height="400" class="img-thumbnail mt-4" [src]="pictureUrl?.value" alt="'../../../assets/home_img.gif'">
+
+    <div class="row mt-5">
+
+      <!-- Book Name -->
+      <div class="col-6">
+        <h4 class="mt-3 display-6 fs-3">Book Name :</h4>
+      </div>
+      <div class="col-6 mt-4 justify-content-center">
+        {{nameOfBook?.value | uppercase}}
+      </div>
+
+      <!-- Author -->
+      <div class="col-6">
+        <h4 class="mt-3 display-6 fs-3">Author :</h4>
+      </div>
+      <div class="col-6 mt-4 justify-content-center">
+        {{author?.value | uppercase}}
+      </div>
+
+      <!-- Genre -->
+      <div class="col-6">
+        <h4 class="display-6 fs-3 mt-3">Genre :</h4>
+      </div>
+      <div class="col-6 mt-4 justify-content-center">
+       {{genre?.value | uppercase}}
+      </div>
+
+    </div> 
+  </div>
+</div>

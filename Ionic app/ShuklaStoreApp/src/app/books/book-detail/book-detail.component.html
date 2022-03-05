@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button routerLink="../"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      {{loadedBook.name}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col> <ion-img [src]="loadedBook.pictureUrl"></ion-img></ion-col>
+    </ion-row>
+    <ion-row>
+
+      <!-- Book Name -->
+      <ion-col size="8">
+        <h1>{{loadedBook.name}}</h1>
+      </ion-col>
+
+      <!-- Book Price -->
+      <ion-col size="4">
+        <h1>{{loadedBook.price | currency: 'INR'}}</h1>
+      </ion-col>
+
+    </ion-row>
+
+    <!-- Book Author and Genre -->
+    <ion-row>
+      <ion-col size="12">
+        Author: {{loadedBook.author}}
+      </ion-col>
+      <ion-col size="12">
+        Genre: {{loadedBook.genre}}
+      </ion-col>
+
+      <ion-col size="12">
+        Rating: {{loadedBook.rating}}
+      </ion-col>
+
+      <ion-col size="12">
+        AddedOn: {{loadedBook.addedOn| date}}
+      </ion-col>
+
+      <ion-col size="12">
+        Pages: {{loadedBook.pages}}
+      </ion-col>
+
+      <ion-col size="12">
+        BuyersCount: {{loadedBook.buyersCount}}
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p>{{loadedBook.description}}</p>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+
+      <ion-col size="6">
+        <!-- Add To Cart Button -->
+        <ion-button expand="block" color="secondary">Add To Cart</ion-button>
+      </ion-col>
+
+      <ion-col size="6">
+        <!-- Buy Button -->
+        <ion-button expand="block" color="success">Buy</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+
+
+</ion-content>

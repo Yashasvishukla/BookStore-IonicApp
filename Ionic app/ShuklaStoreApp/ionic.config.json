@@ -1,0 +1,7 @@
+{
+  "name": "ShuklaStoreApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

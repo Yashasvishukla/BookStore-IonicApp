@@ -1,0 +1,55 @@
+<!-- <div class="card mt-3 mb-3 ml-2" style="max-height: 250px; cursor: pointer">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        [src]="book.pictureUrl"
+        class="img-fluid rounded-start"
+        alt="Image Not Found!"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ book.name }}</h5>
+        <p class="card-text">{{ book.description }}</p>
+        <p class="card-text">
+          <small class="text-muted">Added on - {{ book.addedOn | date }}</small>
+        </p>
+      </div>
+
+      <div class="card-footer">
+        <button
+          class="btn btn-primary"
+          style="margin-right: 5px !important"
+          [routerLink]="['/:id', book._id]"
+          routerLinkActive="active"
+        >
+          View Book
+        </button>
+        <button class="btn btn-secondary">Add To Favoraite</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div
+  class="row g-0 border rounded overflow-hidden flex-md-row mb-2 mt-3 ml-2 shadow-lg h-md-250 position-relative"
+>
+  <div class="col p-4 d-flex flex-column position-static">
+    <strong class="d-inline-block mb-2 text-primary">{{ book.genre }}</strong>
+    <h3 class="mb-0">{{ book.name }}</h3>
+    <div class="mb-1 text-muted">{{ book.addedOn | date }}</div>
+    <p class="card-text mb-auto">{{ book.description }}</p>
+    <a [routerLink]="['./', book._id]" routerLinkActive="router-link-active"  class="stretched-link">Continue reading</a>
+  </div>
+  <div class="col-auto d-none d-lg-block">
+    <img
+      class="bd-placeholder-img"
+      width="200"
+      height="250"
+      [src]="book.pictureUrl"
+      role="img"
+      preserveAspectRatio="xMidYMid slice"
+      focusable="false"
+    >
+  </div>
+</div>
