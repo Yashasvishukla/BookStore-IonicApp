@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Book } from 'src/app/models/books';
+import { BooksService } from '../books.service';
 
 @Component({
   selector: 'app-upload',
@@ -9,7 +13,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class UploadComponent implements OnInit {
   bookForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  book: Observable<Book>;
+
+  constructor(private formBuilder: FormBuilder, private bookService: BooksService, private router: Router) {
     this.bookForm = formBuilder.group({
       name: ['', [Validators.required]],
       description: ['', [Validators.required, Validators.minLength(10)]],
@@ -60,6 +66,17 @@ export class UploadComponent implements OnInit {
   
 
   ngOnInit() {
+    
+  }
+
+  upload(formValues: any)
+  {
+    this.bookService.uploadBook(formValues).subscribe((book: Book) => {
+      if(book!=null)
+      {
+        this.router.navigate(['books/',""+book._id]);
+      }
+    });
   }
 
 }

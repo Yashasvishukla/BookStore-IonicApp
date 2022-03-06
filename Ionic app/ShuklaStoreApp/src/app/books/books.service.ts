@@ -79,4 +79,9 @@ export class BooksService {
   getBook(bookId: string): Observable<Book> {
     return this.httpClient.get<Book>(this.basePath + 'books/' + bookId);
   }
+
+  uploadBook(bookDetails: any): Observable<Book>
+  {
+    return this.httpClient.post<Book>(this.basePath + 'books', bookDetails );
+  }
 }

@@ -11,35 +11,38 @@
   </ion-header>
   
   <ion-content>
-    <form [formGroup]="bookForm">
+    <form [formGroup]="bookForm" (ngSubmit)="upload(bookForm.value)">
       <ion-item>
         <ion-label required position="floating">Name</ion-label>
-        <ion-input name="name"></ion-input>
+        <ion-input name="name" formControlName="name"></ion-input>
       </ion-item>
     
       <ion-item>
         <ion-label position="floating">Author Name</ion-label>
-        <ion-input name="author"></ion-input>
+        <ion-input name="author" formControlName="author"></ion-input>
       </ion-item>
     
       <ion-item>
         <ion-label position="floating">Description</ion-label>
-        <ion-textarea name="description" rows="3" cols="3" clearOnEdit=""></ion-textarea>
+        <ion-textarea name="description" formControlName="description" rows="3" cols="3" clearOnEdit=""></ion-textarea>
       </ion-item>
-    
+      <ion-item>
+        <ion-label position="floating">Genre</ion-label>
+        <ion-input name="genre" formControlName="genre"></ion-input>
+      </ion-item>
     
       <ion-grid>
         <ion-row>
           <ion-col size="6">
             <ion-item>
               <ion-label position="floating">Price</ion-label>
-              <ion-input name="price" type="number" value="100"></ion-input>
+              <ion-input name="price" type="number" value="100" formControlName="price"></ion-input>
             </ion-item>
           </ion-col>
           <ion-col size="6">
             <ion-item>
               <ion-label position="floating">Pages</ion-label>
-              <ion-input name="pages" type="number" value="100"></ion-input>
+              <ion-input name="pages" type="number" value="100" formControlName="pages"></ion-input>
             </ion-item>
           </ion-col>
         </ion-row>
@@ -47,15 +50,15 @@
       
       <ion-item>
         <ion-label position="floating">PictureUrl</ion-label>
-        <ion-input name="pictureUrl"></ion-input>
+        <ion-input name="pictureUrl" formControlName="pictureUrl"></ion-input>
       </ion-item>
     
-      <ion-img  [src]=""></ion-img>
+      <ion-img *ngIf="pictureUrl.value"  [src]="pictureUrl.value"></ion-img>
     
       <ion-grid>
         <ion-row>
           <ion-col size="6">
-            <ion-button expand="full" shape="round" color="success">Upload</ion-button>
+            <ion-button expand="full" shape="round" color="success" type="submit">Upload</ion-button>
           </ion-col>
           <ion-col>
             <ion-button expand="full" shape="round" color="danger" routerLink="" >Cancel</ion-button>
