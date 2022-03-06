@@ -1,6 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Books</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button routerLink="./upload">
+        <ion-icon slot="icon-only" ios="add-circle" md="add-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -8,22 +13,18 @@
 
   <!-- Books List -->
 
+ <ion-grid>
+   <ion-row>
+     <ion-col size-lg="3" size="6" size-sm="12" *ngFor="let book of books | async" [routerLink]="['./',book._id]" routerLinkActive="router-link-active" >
+      <ion-card>
+        <img [src]="book.pictureUrl" />
+        <ion-card-header>
+          <ion-card-title color="primary">{{book.name}}</ion-card-title>
+          <ion-card-subtitle color="tertiary">{{book.author}}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+     </ion-col>
+   </ion-row>
+ </ion-grid>
 
-  <ion-list>
-    <ion-item-sliding *ngFor="let book of books" [routerLink]="['./', book._id]" routerLinkActive="router-link-active">
-      <ion-item>
-        <ion-avatar slot="start">
-          <ion-img [src]="book.pictureUrl"></ion-img>
-        </ion-avatar>
-        <ion-label>
-          <h3>{{book.name}}</h3>
-          <p>{{book.description}}</p>
-          <p>{{book.price}}</p>
-        </ion-label>
-      </ion-item>
-      <ion-item-options side="end">
-        <ion-item-option (click)="buy(book)">Buy</ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list>
 </ion-content>

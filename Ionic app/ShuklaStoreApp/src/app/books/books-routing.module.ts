@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BooksPage } from './books-detail/books.page';
+import { BookDetailResolver } from './resolvers/book-detail.resolver';
+import { UploadComponent } from './upload/upload.component';
 
 const routes: Routes = [
   {
@@ -9,8 +11,13 @@ const routes: Routes = [
     component: BooksPage
   },
   {
-    path: ":bookId",
-    component: BookDetailComponent
+    path: 'upload',
+    component: UploadComponent
+  },
+  {
+    path: ':bookId',
+    component: BookDetailComponent,
+    resolve : { "book" : BookDetailResolver }
   }
   
 ];

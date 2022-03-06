@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
+import { Observable } from 'rxjs';
 import { Book } from 'src/app/models/books';
 import { BooksService } from '../books.service';
 
@@ -8,7 +10,7 @@ import { BooksService } from '../books.service';
   styleUrls: ['./books.page.scss'],
 })
 export class BooksPage implements OnInit {
-  books: Book[];
+  books: Observable<Book[]>;
   constructor(private bookService: BooksService) {
    }
 
@@ -20,5 +22,4 @@ export class BooksPage implements OnInit {
   {
     
   }
-
 }
