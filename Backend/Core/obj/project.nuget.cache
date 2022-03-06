@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8a6j7ZFLq0M3sx3Uz/2v1oYGF8eOG9eT4V1FOpUxeUXqQMVSzx/5Z9hfuH1/GEkA4iL/J3nvm66ZtUZdOrspHA==",
+  "dgSpecHash": "TqfveRysprSn0pASXKMGd0D8hBUgornW1rrwIkw28NLOswFyqLjilgxwxVDZ00oYVpZ84PHLJkNQa2NzALkmPw==",
   "success": true,
-  "projectFilePath": "E:\\BookStore\\Backend\\Core\\Core.csproj",
+  "projectFilePath": "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yasha\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\yasha\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",

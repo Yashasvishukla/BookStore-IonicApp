@@ -1,0 +1,66 @@
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button routerLink="../"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        Upload Book
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <form [formGroup]="bookForm">
+      <ion-item>
+        <ion-label required position="floating">Name</ion-label>
+        <ion-input name="name"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">Author Name</ion-label>
+        <ion-input name="author"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-textarea name="description" rows="3" cols="3" clearOnEdit=""></ion-textarea>
+      </ion-item>
+    
+    
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-item>
+              <ion-label position="floating">Price</ion-label>
+              <ion-input name="price" type="number" value="100"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="6">
+            <ion-item>
+              <ion-label position="floating">Pages</ion-label>
+              <ion-input name="pages" type="number" value="100"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <ion-item>
+        <ion-label position="floating">PictureUrl</ion-label>
+        <ion-input name="pictureUrl"></ion-input>
+      </ion-item>
+    
+      <ion-img  [src]=""></ion-img>
+    
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-button expand="full" shape="round" color="success">Upload</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button expand="full" shape="round" color="danger" routerLink="" >Cancel</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-content>

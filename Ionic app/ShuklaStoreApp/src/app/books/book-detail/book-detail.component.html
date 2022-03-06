@@ -4,7 +4,7 @@
       <ion-back-button routerLink="../"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      {{loadedBook.name}}
+      {{loadedBook?.name}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,18 +15,18 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col> <ion-img [src]="loadedBook.pictureUrl"></ion-img></ion-col>
+      <ion-col> <ion-img [src]="loadedBook?.pictureUrl"></ion-img></ion-col>
     </ion-row>
     <ion-row>
 
       <!-- Book Name -->
       <ion-col size="8">
-        <h1>{{loadedBook.name}}</h1>
+        <h1>{{loadedBook?.name}}</h1>
       </ion-col>
 
       <!-- Book Price -->
       <ion-col size="4">
-        <h1>{{loadedBook.price | currency: 'INR'}}</h1>
+        <h1>{{loadedBook?.price | currency: 'INR'}}</h1>
       </ion-col>
 
     </ion-row>
@@ -34,33 +34,33 @@
     <!-- Book Author and Genre -->
     <ion-row>
       <ion-col size="12">
-        Author: {{loadedBook.author}}
+        Author: {{loadedBook?.author}}
       </ion-col>
       <ion-col size="12">
-        Genre: {{loadedBook.genre}}
-      </ion-col>
-
-      <ion-col size="12">
-        Rating: {{loadedBook.rating}}
+        Genre: {{loadedBook?.genre}}
       </ion-col>
 
       <ion-col size="12">
-        AddedOn: {{loadedBook.addedOn| date}}
+        Rating: {{loadedBook?.rating}}
       </ion-col>
 
       <ion-col size="12">
-        Pages: {{loadedBook.pages}}
+        AddedOn: {{loadedBook?.addedOn| date}}
       </ion-col>
 
       <ion-col size="12">
-        BuyersCount: {{loadedBook.buyersCount}}
+        Pages: {{loadedBook?.pages}}
+      </ion-col>
+
+      <ion-col size="12">
+        BuyersCount: {{loadedBook?.buyersCount}}
       </ion-col>
 
     </ion-row>
 
     <ion-row>
       <ion-col>
-        <p>{{loadedBook.description}}</p>
+        <p>{{loadedBook?.description}}</p>
       </ion-col>
     </ion-row>
 

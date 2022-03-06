@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9+Ku4Xt/Soq3X/Ib6PN8AUzKIIXzOnsVRvKMG7pUwh/9acvu8RRai19he9NL4jUcAN7ECRIKvx1Dh8hl6T5W8A==",
+  "dgSpecHash": "AS612TT2YqbC97G1f/BvA1EcLnjEg9xW6ieDYASv3DgkAjQLjhMIJoUq3u8UNxx5jZ17pNj/qTZHtUj4C9cbDw==",
   "success": true,
-  "projectFilePath": "E:\\BookStore\\Backend\\API\\API.csproj",
+  "projectFilePath": "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yasha\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\yasha\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.9\\microsoft.aspnetcore.jsonpatch.5.0.9.nupkg.sha512",

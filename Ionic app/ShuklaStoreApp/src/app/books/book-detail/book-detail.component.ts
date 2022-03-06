@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
 import { Book } from 'src/app/models/books';
 import { BooksService } from '../books.service';
 
@@ -10,24 +11,14 @@ import { BooksService } from '../books.service';
 })
 export class BookDetailComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute, private bookService: BooksService) { }
+  constructor(private activatedRoute: ActivatedRoute, private bookService: BooksService, private loadingController: LoadingController) { 
+  }
 
   bookId: string;
   loadedBook: Book;
-  ngOnInit() {
-    this.activatedRoute.paramMap.subscribe(
-      params => {
-        if(!params.has('bookId'))
-        {
-          console.log("Not Present");
-            // return to home page
-            return;
-        }
-        console.log(this.bookId);
-        this.bookId = params.get('bookId');
-        this.loadedBook = this.bookService.getBook(this.bookId);
-      }
-    );
+  async ngOnInit() {
+    this.activatedRoute.data.subscribe((book: Book) => {
+      this.loadedBook = book['book'];
+    })
   }
-
 }

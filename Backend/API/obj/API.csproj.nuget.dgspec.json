@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\BookStore\\Backend\\API\\API.csproj": {}
+    "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\API\\API.csproj": {}
   },
   "projects": {
-    "E:\\BookStore\\Backend\\API\\API.csproj": {
+    "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookStore\\Backend\\API\\API.csproj",
+        "projectUniqueName": "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "E:\\BookStore\\Backend\\API\\API.csproj",
+        "projectPath": "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\API\\API.csproj",
         "packagesPath": "C:\\Users\\yasha\\.nuget\\packages\\",
-        "outputPath": "E:\\BookStore\\Backend\\API\\obj\\",
+        "outputPath": "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\BookStore\\Backend\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "E:\\BookStore\\Backend\\Infrastructure\\Infrastructure.csproj"
+              "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -71,14 +71,14 @@
         }
       }
     },
-    "E:\\BookStore\\Backend\\Core\\Core.csproj": {
+    "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookStore\\Backend\\Core\\Core.csproj",
+        "projectUniqueName": "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "E:\\BookStore\\Backend\\Core\\Core.csproj",
+        "projectPath": "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\yasha\\.nuget\\packages\\",
-        "outputPath": "E:\\BookStore\\Backend\\Core\\obj\\",
+        "outputPath": "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -131,14 +131,14 @@
         }
       }
     },
-    "E:\\BookStore\\Backend\\Infrastructure\\Infrastructure.csproj": {
+    "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BookStore\\Backend\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "E:\\BookStore\\Backend\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\yasha\\.nuget\\packages\\",
-        "outputPath": "E:\\BookStore\\Backend\\Infrastructure\\obj\\",
+        "outputPath": "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -155,8 +155,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\BookStore\\Backend\\Core\\Core.csproj": {
-                "projectPath": "E:\\BookStore\\Backend\\Core\\Core.csproj"
+              "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\Core\\Core.csproj": {
+                "projectPath": "G:\\Projects\\BookStore-Ionic\\BookStore-IonicApp-book-features\\Backend\\Core\\Core.csproj"
               }
             }
           }
